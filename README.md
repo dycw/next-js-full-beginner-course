@@ -1,6 +1,6 @@
-# `template-next-js`
+# NextJS Full Beginner Course (Coding in Flow)
 
-Template for Next.js Apps
+https://www.youtube.com/watch?v=e1EIwuO-Dlo
 
 #
 

@@ -1,0 +1,3 @@
+[submodule "nextjs-crash-course-youtube"]
+	path = nextjs-crash-course-youtube
+	url = https://github.com/codinginflow/nextjs-crash-course-youtube

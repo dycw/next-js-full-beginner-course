@@ -1,7 +1,7 @@
 import NewsArticleGrid from "@/components/NewsArticleGrid";
 import { NewsArticle } from "@/models/NewsArticles";
 import { FormEvent, useState } from "react";
-import { Button, Form, Spinner } from "react-bootstrap";
+import { Alert, Button, Form, Spinner } from "react-bootstrap";
 
 export default function SearchNewsPage() {
   const [searchResults, setSearchResults] = useState<NewsArticle[] | null>(
@@ -37,6 +37,11 @@ export default function SearchNewsPage() {
   return (
     <main>
       <h1>Search News</h1>
+      <Alert>
+        This is page uses <strong>client-side data fetching</strong> to show
+        fresh data for every search. Requests are handled by our backend via{" "}
+        <strong>API routes</strong>.
+      </Alert>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="search-input">
           <Form.Label>Search query</Form.Label>

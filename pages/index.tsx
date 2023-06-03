@@ -11,10 +11,7 @@ type BreakingNewsPageProps = {
 export const getServerSideProps: GetServerSideProps<
   BreakingNewsPageProps
 > = async () => {
-  const apiKey = process.env.NEWS_API_KEY;
-  if (apiKey === undefined) {
-    throw Error("apiKey is undefined");
-  }
+  const apiKey = process.env.NEWS_API_KEY!;
   const params = new URLSearchParams({ country: "us", apiKey });
   const url = `https://newsapi.org/v2/top-headlines?${params.toString()}`;
   const response = await fetch(url);
